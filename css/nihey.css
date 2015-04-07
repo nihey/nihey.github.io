@@ -15,6 +15,10 @@ html, body {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 #particles {
   z-index: -1;
   position: absolute;
