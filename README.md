@@ -6,4 +6,6 @@ This is my personal homepage on [GitHub Pages](https://pages.github.com/)
 
 This code is released under the [MIT License](http://www.opensource.org/licenses/MIT)
 
-# TBA
+# Usage
+
+You can visit this website on [here](http://nihey.github.io)
