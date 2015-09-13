@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'ModeSeven';
+  src: url('../assets/fonts/mode-seven.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+}
+
+body {
+  > .text-container {
+    width: 100%;
+    padding: 1.5em;
+    font-family: "ModeSeven", "Courier";
+
+    > * {
+      display: inline-block;
+      float: left;
+    }
+
+    > #text {
+      width: 50%;
+    }
+
+    > #javascript {
+      font-size: 0.6em;
+      width: 25%;
+    }
+
+    > #css {
+      font-size: 0.6em;
+      width: 25%;
+    }
+  }
+
+  > .animation-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    > :first-child {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      height: 32px;
+      z-index: 1000;
+
+      > canvas {
+        display: inline-block;
+        z-index: 1000;
+      }
+    }
+
+    > :last-child {
+      white-space: nowrap;
+      height: 160px;
+    }
+  }
+}

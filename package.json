@@ -19,15 +19,18 @@
     "babel-loader": "^5.3.1",
     "cheerio": "^0.19.0",
     "css-loader": "^0.16.0",
+    "exports-loader": "^0.6.2",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "html-minifier": "^0.7.2",
+    "image-load": "0.0.0",
     "img-loader": "^1.1.0",
     "json-loader": "^0.5.2",
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
     "md5": "^2.0.0",
     "node-libs-browser": "^0.5.2",
+    "sprite-js": "^0.1.0",
     "style-loader": "^0.12.3",
     "webpack": "^1.10.1"
   }
