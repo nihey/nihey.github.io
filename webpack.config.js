@@ -27,6 +27,7 @@ module.exports = {
 
   module: {
     loaders: [
+      { test: /\.txt$/, loader: 'text-loader'},
       { test: /\.json$/, loader: 'json-loader'},
       { test: /\.js$/, exclude: /(node_modules|bower_components)\//, loader: 'babel-loader'},
       { test: /\.(ttf.*|eot.*|woff.*|ogg|mp3)$/, loader: 'file-loader'},

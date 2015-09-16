@@ -14,24 +14,41 @@ body, html {
 body {
   > .text-container {
     width: 100%;
-    padding: 1.5em;
+    padding: 20px 30px;
     font-family: "ModeSeven", "Courier";
 
     > * {
       display: inline-block;
       float: left;
+
+      > pre {
+        overflow: auto;
+        max-height: 500px;
+        white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+      }
     }
 
     > #text {
+      margin-left: -15px;
       width: 50%;
+
+      > pre {
+        text-align: justify;
+      }
     }
 
     > #javascript {
+      margin: 0 15px;
       font-size: 0.6em;
       width: 25%;
     }
 
     > #css {
+      margin-right: -15px;
       font-size: 0.6em;
       width: 25%;
     }

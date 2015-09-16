@@ -1,9 +1,23 @@
+import animate from './animate';
 import imageLoad from 'image-load';
 import Sprite from 'exports?window.Sprite!sprite-js/dist/sprite.min';
 
 // 'page' global variable will store anything we might need to make the
 // presentation during the 'eval' calls.
-window.page = {};
+window.page = {
+  checkTags: function() {
+    Object.keys(this.tags).forEach(function(tag) {
+      this.control[tag] || ((this.tags[tag] > 0) && this.continues[tag]());
+    }, this);
+  },
+  control: {},
+  continues: {},
+  tags: {
+    'text': 1,
+    'javascript': 0,
+    'css': 0,
+  },
+};
 
 imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/me.png')], function(terrain, me) {
@@ -27,4 +41,8 @@ imageLoad([require('../assets/images/terrain.png'),
   // Expose global variables to be used on 'eval'
   window.page.me = me;
   window.page.terrain = terrain;
+
+  animate(require('../assets/texts/javascript.txt'), 'javascript');
+  animate(require('../assets/texts/css.txt'), 'css');
+  animate(require('../assets/texts/text.txt'), 'text');
 });
