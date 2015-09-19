@@ -6,18 +6,26 @@ export default function(text, tag, progress=function(){}) {
 
   var putLine = function(line, callback) {
     var index = 0;
-    var end = function() {
-      element.append('\n');
+    var end = function(breakLine) {
+      breakLine && element.append('\n');
       callback();
     };
 
     var putChar = function() {
+      var character = line[index++];
+      if (character === '§') {
+        return setTimeout(putChar, 300);
+      }
+      if (character === '\\' && line.length === index) {
+        return end(false);
+      }
+
       // Always scroll to the bottom when typing
       element[0].scrollTop = element[0].scrollHeight;
 
-      element.append(line[index++]);
+      element.append(character);
       index < line.length && setTimeout(putChar, 0);
-      index < line.length || end();
+      index < line.length || end(true);
     };
 
     setTimeout(putChar, 0);
