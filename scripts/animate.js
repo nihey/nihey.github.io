@@ -32,6 +32,7 @@ export default function(text, tag, progress=function(){}) {
   };
 
   var index = 0;
+  var printed = '';
   var callback = function() {
     // Always scroll to the bottom when typing
     element[0].scrollTop = element[0].scrollHeight;
@@ -47,11 +48,15 @@ export default function(text, tag, progress=function(){}) {
 
     if (line == undefined) {
       // Undefined line === end of presentation
-      return progress(true);
+      progress(true, printed);
+      printed = '';
+      return;
     }
     else if (line.substr(0, 2) === '**') {
       // ** line === call the progress callback and continue
-      progress(false);
+      progress(false, printed);
+      printed = '';
+      return callback();
     }
     else if (line.substr(0, 2) === '++') {
       // ++[tag] line === increment a tag
@@ -66,6 +71,7 @@ export default function(text, tag, progress=function(){}) {
       return callback();
     }
 
+    printed += line + '\n';
     putLine(line, callback);
   };
 

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import animate from './animate';
 import imageLoad from 'image-load';
 import Sprite from 'exports?window.Sprite!sprite-js/dist/sprite.min';
@@ -19,6 +20,8 @@ window.page = {
   },
 };
 
+window.$ = $;
+
 imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/me.png')], function(terrain, me) {
   // Initialize the sprite
@@ -28,7 +31,8 @@ imageLoad([require('../assets/images/terrain.png'),
     rows: 4,
     columns: 3,
     rowIndex: 2,
-    columnFrequency: 1,
+    columnIndex: 1,
+    columnFrequency: 0,
   });
 
   // Keeps the sprite running
@@ -42,7 +46,11 @@ imageLoad([require('../assets/images/terrain.png'),
   window.page.me = me;
   window.page.terrain = terrain;
 
-  animate(require('../assets/texts/javascript.txt'), 'javascript');
-  animate(require('../assets/texts/css.txt'), 'css');
+  animate(require('../assets/texts/javascript.txt'), 'javascript', function(finished, chunk) {
+    eval(chunk);
+  });
+  animate(require('../assets/texts/css.txt'), 'css', function(finished, chunk) {
+    $('#style').append(chunk);
+  });
   animate(require('../assets/texts/text.txt'), 'text');
 });

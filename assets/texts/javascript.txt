@@ -1,9 +1,14 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a dignissim nulla. Vestibulum et erat eget nibh iaculis ultrices. Nam semper tempor pellentesque. Cras pretium nulla nunc, sed cursus justo pretium sed. Donec congue consequat felis, nec venenatis ipsum tincidunt eget. Etiam maximus viverra faucibus. Nam blandit interdum ligula, in malesuada nisl placerat sed. Vivamus porta rhoncus ultrices. Praesent luctus, lectus et iaculis efficitur, metus eros fermentum lectus, eu venenatis nulla justo quis lacus. Curabitur semper, mi sed pellentesque luctus, lorem nibh finibus massa, vel semper odio urna sit amet lorem. Donec mattis, diam quis mollis scelerisque, velit est scelerisque elit, congue interdum nunc massa sed metus. Mauris fermentum odio metus, eget auctor mauris posuere vitae. Etiam consectetur sed libero sit amet tempus.
+for(var i = 0; i < 20; i++) {
+  setTimeout(function() {
+    $('#platforms').append($(window.page.terrain).clone());
+  }, i * 100);
+}
 
-Integer in mi condimentum, mollis sem a, efficitur lacus. Pellentesque non purus non nisl tempus ultricies vel vitae sem. Nulla bibendum, mauris ac consequat egestas, risus arcu pulvinar urna, eu interdum arcu ligula vel justo. Nulla efficitur id leo ut pharetra. Etiam lacus nisl, luctus sed accumsan mollis, pretium eu nunc. Donec vitae est id diam pretium porttitor. In nisi metus, sodales ac lobortis at, aliquet eget diam.
+setTimeout(function() {
+  window.page.tags.css = 1;
+  window.page.checkTags();
+}, i * 100);
+**
+--
 
-Proin tempor, augue sit amet fringilla viverra, erat mauris feugiat nibh, quis rhoncus libero lorem at lorem. Proin consectetur consequat enim, non bibendum libero fermentum nec. Nulla hendrerit leo ac vulputate ultricies. Nam lobortis eros eget purus placerat, ut volutpat lacus molestie. Sed consectetur sit amet dolor et luctus. Nullam sem erat, scelerisque eu dapibus at, consequat id nisl. Pellentesque ut nulla eget magna finibus convallis. Etiam eu congue massa. Phasellus lacinia molestie nibh, lobortis eleifend lectus dignissim in. Pellentesque fringilla luctus sem, vel cursus quam. Sed quis tristique lacus.
-
-Mauris a molestie orci, vel fermentum eros. In eget est gravida, rhoncus nisi in, consectetur arcu. Sed quam libero, malesuada eu lectus in, hendrerit porttitor est. Proin convallis dapibus odio a cursus. Curabitur sit amet leo sed turpis posuere sodales. Duis semper risus a efficitur sagittis. Nulla semper massa ullamcorper odio tristique, quis malesuada velit fermentum.
-
-Praesent a ligula nisi. In sollicitudin ultrices neque ut suscipit. Praesent dictum lacus diam, ac vehicula orci pulvinar vitae. Sed ultrices tortor vitae ante efficitur interdum. Etiam lectus augue, accumsan ut pretium sed, vestibulum vitae metus. Integer rutrum commodo ante in pellentesque. Pellentesque velit felis, porta ut pharetra in, gravida scelerisque elit. Sed elit lectus, auctor vitae nulla eu, vestibulum dictum neque. Nulla sed venenatis nunc. Quisque quis felis libero. Pellentesque pretium interdum felis at bibendum. Nunc at enim sed est vehicula condimentum a vel felis.
+window.page.me.columnFrequency = 1
