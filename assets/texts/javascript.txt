@@ -1,9 +1,11 @@
+// Build the terrain
 for(var i = 0; i < 20; i++) {
   setTimeout(function() {
     $('#platforms').append($(window.page.terrain).clone());
   }, i * 100);
 }
 
+// Continue the presentation once the terrain has been put
 setTimeout(function() {
   window.page.tags.css = 1;
   window.page.checkTags();
@@ -11,4 +13,47 @@ setTimeout(function() {
 **
 --
 
+// Enables my walking animation
 window.page.me.columnFrequency = 1
+
+// Highlight code
+window.highlight = function(tag) {
+  $(tag + ' pre').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+};
+**
+
+// Randomly spawn clouds
+var spawnClouds = function(time) {
+  setTimeout(function() {
+    // Prevent clouds from being spammed
+    if($('#clouds').children().length > 10) {
+      // Try to create another cloud later
+      return spawnClouds(2000 + (8000 * Math.random()));
+    }
+
+    var style = {};
+    style['margin-top'] = (-200 - (Math.random() * 200)) + 'px';
+    style['animation'] = 'view-scroll ' + (15000 + (15000 * Math.random())) + 'ms linear';
+
+    // Create the cloud
+    var index = Math.floor(window.page.clouds.length * Math.random());
+    var cloud = $(window.page.clouds[index]).clone();
+    $(cloud).css(style);
+
+    // Display the cloud
+    $('#clouds').append(cloud);
+
+    // Remove the cloud when it's animation ends
+    $(cloud).one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
+      $(cloud).remove();
+    });
+
+    // Create another cloud
+    spawnClouds(2000 + (8000 * Math.random()));
+  }, time);
+};
+
+// Clouds approaching...
+spawnClouds(0);

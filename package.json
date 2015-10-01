@@ -22,6 +22,7 @@
     "exports-loader": "^0.6.2",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "highlight.js": "^8.8.0",
     "html-minifier": "^0.7.2",
     "image-load": "0.0.0",
     "img-loader": "^1.1.0",

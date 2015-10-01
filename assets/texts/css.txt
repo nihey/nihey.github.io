@@ -3,7 +3,7 @@
 }
 **
 
-.text-container > div {
+.text-container > div > pre {
   padding: 1em;
   border: 4px solid #2c3e50;
   border-radius: 0.2em;
@@ -27,6 +27,7 @@ img {
 ++javascript
 
 #canvas {
+  animation: fade-in 2s;
   opacity: 1;
 }
 
@@ -46,4 +47,23 @@ img {
 
 body {
   background: #59ABE3;
+}
+**
+
+#javascript .hljs, #css .hljs {
+  background-color: rgba(63, 63, 63, 0.8);
+}
+
+@keyframes view-scroll {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#clouds > img {
+  z-index: -100;
+  animation: view-scroll 30s linear;
 }

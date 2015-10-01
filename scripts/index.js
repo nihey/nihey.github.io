@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import hljs from 'highlight.js';
 import animate from './animate';
 import imageLoad from 'image-load';
 import Sprite from 'exports?window.Sprite!sprite-js/dist/sprite.min';
@@ -21,9 +22,17 @@ window.page = {
 };
 
 window.$ = $;
+window.hljs = hljs;
 
 imageLoad([require('../assets/images/terrain.png'),
-           require('../assets/images/me.png')], function(terrain, me) {
+           require('../assets/images/me.png'),
+           require('../assets/images/clouds/1.png'),
+           require('../assets/images/clouds/2.png'),
+           require('../assets/images/clouds/3.png'),
+           require('../assets/images/clouds/4.png'),
+           require('../assets/images/clouds/5.png'),
+           require('../assets/images/clouds/6.png')],
+function(terrain, me) {
   // Initialize the sprite
   me = new Sprite({
     canvas: document.getElementById('canvas'),
@@ -34,6 +43,8 @@ imageLoad([require('../assets/images/terrain.png'),
     columnIndex: 1,
     columnFrequency: 0,
   });
+
+  window.page.clouds = Array.prototype.slice.call(arguments, 2);
 
   // Keeps the sprite running
   var context = me.context;
@@ -48,8 +59,10 @@ imageLoad([require('../assets/images/terrain.png'),
 
   animate(require('../assets/texts/javascript.txt'), 'javascript', function(finished, chunk) {
     eval(chunk);
+    window.highlight && window.highlight('#javascript');
   });
   animate(require('../assets/texts/css.txt'), 'css', function(finished, chunk) {
+    window.highlight && window.highlight('#css');
     $('#style').append(chunk);
   });
   animate(require('../assets/texts/text.txt'), 'text');

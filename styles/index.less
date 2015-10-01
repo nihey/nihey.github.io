@@ -1,3 +1,5 @@
+@import "../node_modules/highlight.js/styles/zenburn.css";
+
 @font-face {
   font-family: 'ModeSeven';
   src: url('../assets/fonts/mode-seven.ttf');
@@ -13,9 +15,15 @@ body, html {
 
 body {
   > .text-container {
+    position: fixed;
     width: 100%;
     padding: 20px 30px;
     font-family: "ModeSeven", "Courier";
+    z-index: 1000;
+
+    * {
+      z-index: 1000;
+    }
 
     > * {
       display: inline-block;
@@ -74,9 +82,17 @@ body {
       }
     }
 
-    > :last-child {
+    > #platforms {
       white-space: nowrap;
       height: 160px;
+    }
+
+    > #clouds {
+      position: absolute;
+      bottom: 192px;
+      * {
+        position: absolute;
+      }
     }
   }
 }
