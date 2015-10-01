@@ -62,8 +62,18 @@ function(terrain, me) {
     window.highlight && window.highlight('#javascript');
   });
   animate(require('../assets/texts/css.txt'), 'css', function(finished, chunk) {
+    console.log(chunk);
     window.highlight && window.highlight('#css');
     $('#style').append(chunk);
   });
-  animate(require('../assets/texts/text.txt'), 'text');
+
+  var html = '';
+  animate(require('../assets/texts/text.txt'), 'text', function(finished, chunk) {
+    html += chunk;
+    $('#text pre').html(html);
+
+    // Always keep the scrolling bar at the bottom when updating information
+    var element = $('#text pre')[0];
+    element.scrollTop = element.scrollHeight;
+  });
 });

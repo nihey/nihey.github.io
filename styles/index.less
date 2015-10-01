@@ -37,6 +37,11 @@ body {
         white-space: -pre-wrap;      /* Opera 4-6 */
         white-space: -o-pre-wrap;    /* Opera 7 */
         word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+        a {
+          text-decoration: none;
+          font-weight: bold;
+        }
       }
     }
 
@@ -73,12 +78,12 @@ body {
       width: 100%;
       text-align: center;
       height: 32px;
-      z-index: 1000;
+      z-index: 999;
 
       > canvas {
         opacity: 0;
         display: inline-block;
-        z-index: 1000;
+        z-index: 999;
       }
     }
 

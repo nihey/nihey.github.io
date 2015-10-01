@@ -71,7 +71,7 @@ export default function(text, tag, progress=function(){}) {
       return callback();
     }
 
-    printed += line + '\n';
+    printed += line.replace(/§/g, '').replace(/\\$/g, '') + '\n';
     putLine(line, callback);
   };
 

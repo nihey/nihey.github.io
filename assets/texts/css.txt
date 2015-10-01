@@ -21,6 +21,16 @@
 img {
   animation: fade-in 2s;
 }
+
+#text > pre {
+  white-space: normal;
+  background-color: rgba(63, 63, 63, 0.8);
+  color: #eff;
+}
+
+#text > pre a {
+  color: #f7ca18;
+}
 **
 ++javascript
 --
