@@ -94,3 +94,29 @@ body {
 #skip:hover {
   background-color: #1ba39c;
 }
+
+@media (max-width: 799px) {
+  #javascript {
+    display: none;
+  }
+
+  #css {
+    margin-left: 30px;
+  }
+
+  #text {
+    width: 75% !important;
+  }
+}
+**
+
+@media (max-width: 599px) {
+  #javascript, #css {
+    display: none;
+  }
+
+  #text {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
