@@ -1,4 +1,8 @@
-![Screenshot](https://raw.githubusercontent.com/nihey/nihey.github.io/development/screenshot.png)
+<p align="center">
+  <a target="_blank" href="http://nihey.github.io">
+    <img src="https://raw.githubusercontent.com/nihey/nihey.github.io/development/screenshot.png"/>
+  </a>
+</p>
 
 # 仁平 / Nihey Takizawa
 
