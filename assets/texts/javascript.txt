@@ -1,3 +1,13 @@
+// Highlight code
+window.highlight = function(tag) {
+  $(tag + ' pre').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+};
+window.highlight('#javascript');
+window.highlight('#css');
+**
+
 // Build the terrain
 // length is the number of platforms we need to fill the screen
 var length = Math.ceil(window.outerWidth / 96) + 1;
@@ -26,19 +36,17 @@ window.onresize = function() {
   for(var i = 0; i < length; i++) {
     $('#platforms').append($(window.page.terrain).clone());
   }
+
+  // Update these text boxes height to be in optimal
+  window.resizeBoxes();
 };
+
+window.resizeBoxes();
 **
 --
 
 // Enables my walking animation
 window.page.me.columnFrequency = 1
-
-// Highlight code
-window.highlight = function(tag) {
-  $(tag + ' pre').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
-};
 **
 
 // How much time a object would take to cross the screen if it had a given

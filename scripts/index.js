@@ -46,6 +46,12 @@ function(terrain, me) {
 
   window.page.clouds = Array.prototype.slice.call(arguments, 2);
 
+  window.resizeBoxes = function() {
+    var height = Math.max(200, window.innerHeight - 220);
+    $('#text pre, #javascript pre, #css pre').css({'max-height': height});
+  };
+  window.resizeBoxes();
+
   // Keeps the sprite running
   var context = me.context;
   setInterval(function() {
