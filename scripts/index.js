@@ -62,7 +62,6 @@ function(terrain, me) {
     window.highlight && window.highlight('#javascript');
   });
   animate(require('../assets/texts/css.txt'), 'css', function(finished, chunk) {
-    console.log(chunk);
     window.highlight && window.highlight('#css');
     $('#style').append(chunk);
   });
