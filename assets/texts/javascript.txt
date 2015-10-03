@@ -41,6 +41,13 @@ window.highlight = function(tag) {
 };
 **
 
+// How much time a object would take to cross the screen if it had a given
+// pixel per second speed?
+window.animationTime = function(pps) {
+  return window.outerWidth / pps;
+}
+**
+
 // Randomly spawn clouds
 var spawnClouds = function(time) {
   setTimeout(function() {
@@ -51,8 +58,11 @@ var spawnClouds = function(time) {
     }
 
     var style = {};
+    // The cloud can have a bottom padding ranging from 200-400px
     style['margin-top'] = (-200 - (Math.random() * 200)) + 'px';
-    style['animation'] = 'view-scroll ' + (15000 + (15000 * Math.random())) + 'ms linear';
+    // The cloud can have a speed of 35-90 pixels per second
+    var time = animationTime(35 + (Math.random() * 55));
+    style['animation'] = 'view-scroll ' + time.toFixed(2) + 's linear';
 
     // Create the cloud
     var index = Math.floor(window.page.clouds.length * Math.random());
