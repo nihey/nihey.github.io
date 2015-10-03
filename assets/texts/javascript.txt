@@ -14,16 +14,18 @@ var length = Math.ceil(window.outerWidth / 96) + 1;
 var i;
 for(i = 0; i < length; i++) {
   // Creates all platforms with a slight delay between them
-  setTimeout(function() {
+  window.page.skip || setTimeout(function() {
     $('#platforms').append($(window.page.terrain).clone());
   }, i * 100);
 }
 
 // Continue the presentation once the terrain has been put
-setTimeout(function() {
+window.page.skip || setTimeout(function() {
   window.page.tags.css = 1;
-  window.page.checkTags();
+  window.page.skip || window.page.checkTags();
+  window.page.skip && window.page.fixPlatforms();
 }, i * 100);
+window.page.skip && window.page.fixPlatforms();
 **
 
 // Just make sure that when the user resizes the screen, the number of

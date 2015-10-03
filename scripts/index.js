@@ -12,8 +12,14 @@ window.page = {
       this.control[tag] || ((this.tags[tag] > 0) && this.continues[tag]());
     }, this);
   },
+  checkFinished: function() {
+    // Hide skip button once all tags have finished
+    var allFinished = Object.keys(this.tags).every(tag => this.finished[tag]);
+    allFinished && $('#skip').hide();
+  },
   control: {},
   continues: {},
+  finished: {},
   tags: {
     'text': 1,
     'javascript': 0,
@@ -33,6 +39,14 @@ imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/clouds/5.png'),
            require('../assets/images/clouds/6.png')],
 function(terrain, me) {
+  $('#skip').click(function() {
+    window.page.skip = 1;
+    window.page.tags.text = 99;
+    window.page.tags.javascript = 99;
+    window.page.tags.css = 99;
+    window.page.checkTags();
+  });
+
   // Initialize the sprite
   me = new Sprite({
     canvas: document.getElementById('canvas'),
@@ -52,6 +66,16 @@ function(terrain, me) {
   };
   window.resizeBoxes();
 
+  window.page.fixPlatforms = function() {
+    // Remove the old platforms
+    $('#platforms').html('');
+
+    var length = Math.ceil(window.outerWidth / 96) + 1;
+    for(var i = 0; i < length; i++) {
+      $('#platforms').append($(window.page.terrain).clone());
+    }
+  };
+
   // Keeps the sprite running
   var context = me.context;
   setInterval(function() {
@@ -66,10 +90,14 @@ function(terrain, me) {
   animate(require('../assets/texts/javascript.txt'), 'javascript', function(finished, chunk) {
     eval(chunk);
     window.highlight && window.highlight('#javascript');
+    window.page.finished.javascript = finished;
+    window.page.checkFinished();
   });
   animate(require('../assets/texts/css.txt'), 'css', function(finished, chunk) {
     window.highlight && window.highlight('#css');
     $('#style').append(chunk);
+    window.page.finished.css = finished;
+    window.page.checkFinished();
   });
 
   var html = '';
@@ -80,5 +108,7 @@ function(terrain, me) {
     // Always keep the scrolling bar at the bottom when updating information
     var element = $('#text pre')[0];
     element.scrollTop = element.scrollHeight;
+    window.page.finished.text = finished;
+    window.page.checkFinished();
   });
 });

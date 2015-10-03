@@ -77,3 +77,20 @@ body {
   z-index: -100;
   animation: view-scroll 30s linear;
 }
+**
+
+#skip {
+  padding: 0.5em;
+  width: 100px;
+  border: none;
+  border-radius: 0.2em;
+  background-color: #a2ded0;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #111;
+  transition: all 1s ease-out;
+}
+
+#skip:hover {
+  background-color: #1ba39c;
+}

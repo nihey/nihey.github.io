@@ -34,6 +34,14 @@ export default function(text, tag, progress=function(){}) {
   var index = 0;
   var printed = '';
   var callback = function() {
+    if (window.page.skip) {
+      var remaining = lines.slice(index).join('\n');
+      printed += remaining.replace(/((\*\*|\$)\n|§)/g, '')
+                          .replace(/(\+\+|\-\-)[A-z]*\n/g, '');
+      element.append(printed);
+      return progress(true, printed);
+    }
+
     // Always scroll to the bottom when typing
     element[0].scrollTop = element[0].scrollHeight;
 
