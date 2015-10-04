@@ -94,6 +94,7 @@ var spawnClouds = function(time) {
 
 // Clouds approaching...
 spawnClouds(0);
+**
 
 // Randomly spawn people
 // Keeping the same way as the clouds one, just in case I want to make it
