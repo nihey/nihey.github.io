@@ -32,6 +32,10 @@ window.hljs = hljs;
 
 imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/me.png'),
+           require('../assets/images/random-chars/1.png'),
+           require('../assets/images/random-chars/2.png'),
+           require('../assets/images/random-chars/3.png'),
+           require('../assets/images/random-chars/4.png'),
            require('../assets/images/clouds/1.png'),
            require('../assets/images/clouds/2.png'),
            require('../assets/images/clouds/3.png'),
@@ -47,6 +51,8 @@ function(terrain, me) {
     window.page.checkTags();
   });
 
+  window.Sprite = Sprite;
+
   // Initialize the sprite
   me = new Sprite({
     canvas: document.getElementById('canvas'),
@@ -58,7 +64,8 @@ function(terrain, me) {
     columnFrequency: 0,
   });
 
-  window.page.clouds = Array.prototype.slice.call(arguments, 2);
+  window.page.people = Array.prototype.slice.call(arguments, 2, 6);
+  window.page.clouds = Array.prototype.slice.call(arguments, 6);
 
   window.resizeBoxes = function() {
     var height = Math.max(200, window.innerHeight - 220);

@@ -120,3 +120,55 @@ body {
     width: 100% !important;
   }
 }
+**
+
+@keyframes slight-dangle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.github {
+  position: fixed;
+  z-index: 1100;
+  bottom: 15px;
+  right: 15px;
+  color: #1E824C;
+  font-size: 48px;
+  text-decoration: none;
+  outline: 0;
+  transition: color 0.3s;
+  animation: slight-dangle 2s ease-in-out infinite;
+}
+**
+
+.github, .github * {
+  opacity: 1 !important;
+}
+
+.github:hover {
+  color: #A2DED0;
+}
+**
+
+@keyframes person-scroll {
+  from {
+    right: -32px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+.random-person {
+  opacity: 1 !important;
+  position: absolute;
+  right: -32px;
+}
+**

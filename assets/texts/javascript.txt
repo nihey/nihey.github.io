@@ -94,3 +94,63 @@ var spawnClouds = function(time) {
 
 // Clouds approaching...
 spawnClouds(0);
+
+// Randomly spawn people
+// Keeping the same way as the clouds one, just in case I want to make it
+// possible to spawn multiple people at the same time later.
+var spawnPeople = function(time) {
+  setTimeout(function() {
+    // Only one person at a time
+    if ($('#people').children().length > 1) {
+      return spawnPeople(animationTime(80))
+    }
+
+    // Randomize how much speed will the character have
+    var style = {};
+    var time = animationTime(85 + (Math.random() * 15));
+    style['animation'] = 'person-scroll ' + time.toFixed(2) + 's linear';
+
+    // Create the character canvas and insert it into the DOM
+    var canvas = $('<canvas class="random-person" width="32" height="32"></canvas>')[0];
+    $(canvas).css(style);
+    var context = canvas.getContext('2d');
+    $('#people').append(canvas);
+
+    // Index of the image to be used
+    var index = Math.floor(window.page.people.length * Math.random());
+
+    // Create the character sprite
+    var person = new Sprite({
+      canvas: canvas,
+      image: window.page.people[index],
+      rows: 4,
+      columns: 3,
+      rowIndex: 1,
+      columnIndex: 1,
+      columnFrequency: 1,
+    });
+
+    // Flag that determines whether the character animation has finished or not
+    var finished = false;
+    $(canvas).one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
+      finished = true;
+      $(canvas).remove();
+      spawnPeople(0)
+    });
+
+    // Keep drawing the character untill he's finished walking the screen
+    var draw = function() {
+      setTimeout(function() {
+        if (!finished) {
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          person.draw(0, 0);
+          draw();
+        }
+      }, 200);
+    };
+
+    draw();
+  }, time);
+};
+
+spawnPeople(0);
