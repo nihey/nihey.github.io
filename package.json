@@ -4,6 +4,7 @@
   "description": "Simple Page app boilerplate using webpack",
   "main": "scripts/index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
