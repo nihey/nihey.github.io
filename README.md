@@ -8,6 +8,8 @@
 
 My Personal Homepage ([here](http://nihey.github.io))
 
+[![Build
+Status](https://travis-ci.org/nihey/nihey.github.io.svg?branch=development)](https://travis-ci.org/nihey/nihey.github.io)
 [![Dependency
 Status](https://david-dm.org/nihey/nihey.github.io.png)](https://david-dm.org/nihey/nihey.github.io)
 
