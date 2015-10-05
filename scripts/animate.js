@@ -85,4 +85,4 @@ export default function(text, tag, progress=function(){}) {
 
   window.page.continues[tag] = callback;
   callback();
-};
+}

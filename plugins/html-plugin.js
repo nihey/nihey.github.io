@@ -26,24 +26,24 @@ HtmlParserWebpackPlugin.prototype.apply = function(compiler) {
 
 /* Iterate through each element href and src tags and parse them */
 HtmlParserWebpackPlugin.prototype.compile = function(file, compilation, callback) {
-    var input = path.join(this.compiler.context, file);
-    var html = $.load(fs.readFileSync(input));
-    html('[href],[src]').each(function(i, element) {
-      this.parse(element, 'href', compilation);
-      this.parse(element, 'src', compilation);
-    }.bind(this));
+  var input = path.join(this.compiler.context, file);
+  var html = $.load(fs.readFileSync(input));
+  html('[href],[src]').each(function(i, element) {
+    this.parse(element, 'href', compilation);
+    this.parse(element, 'src', compilation);
+  }.bind(this));
 
-    var htmlSource = html.html();
-    if (this.production) {
-      htmlSource = htmlMinify(htmlSource, {
-        preserveLineBreaks: false,
-        removeComments: true,
-        removeCommentsFromCDATA: true,
-        collapseWhitespace: true,
-      });
-    }
-    this.createFile(compilation, file, htmlSource);
-    callback();
+  var htmlSource = html.html();
+  if (this.production) {
+    htmlSource = htmlMinify(htmlSource, {
+      preserveLineBreaks: false,
+      removeComments: true,
+      removeCommentsFromCDATA: true,
+      collapseWhitespace: true,
+    });
+  }
+  this.createFile(compilation, file, htmlSource);
+  callback();
 };
 
 /* If the elementh with the tag includes a '!' prefix, it should be emitted */
@@ -75,6 +75,6 @@ HtmlParserWebpackPlugin.prototype.createFile = function(compilation, name, sourc
       return source.length;
     },
   };
-}
+};
 
 module.exports = HtmlParserWebpackPlugin;
