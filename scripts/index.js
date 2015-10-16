@@ -43,13 +43,15 @@ imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/clouds/5.png'),
            require('../assets/images/clouds/6.png')],
 function(terrain, me) {
-  $('#skip').click(function() {
+  let skip = function() {
     window.page.skip = 1;
     window.page.tags.text = 99;
     window.page.tags.javascript = 99;
     window.page.tags.css = 99;
     window.page.checkTags();
-  });
+  };
+
+  $('#skip').click(skip);
 
   window.Sprite = Sprite;
 
@@ -118,4 +120,43 @@ function(terrain, me) {
     window.page.finished.text = finished;
     window.page.checkFinished();
   });
+
+  // Finally, display the skip button
+  $('#skip').css({opacity: 1});
+
+  // Execute link anchored actions (if any)
+  let actions = location.hash.substr(3).split('/');
+  // Skip
+  if (actions.indexOf('skip') !== -1) {
+    skip();
+  }
+
+  // *-main routes
+  if (actions.indexOf('javascript-main') !== -1) {
+    $('#text').css({width: '25%', 'font-size': '0.6em'});
+    $('#css').css({width: '25%'});
+    $('#javascript').css({width: '50%', 'font-size': '1em'});
+  }
+  if (actions.indexOf('css-main') !== -1) {
+    $('#text').css({width: '25%', 'font-size': '0.6em'});
+    $('#javascript').css({width: '25%'});
+    $('#css').css({width: '50%', 'font-size': '1em'});
+  }
+
+  // *-only routes
+  if (actions.indexOf('html-only') !== -1) {
+    $('#javascript').css({display: 'none'});
+    $('#css').css({display: 'none'});
+    $('#text').css({width: '100%', 'font-size': '1em'});
+  }
+  if (actions.indexOf('javascript-only') !== -1) {
+    $('#text').css({display: 'none'});
+    $('#css').css({display: 'none'});
+    $('#javascript').css({width: '100%', 'font-size': '1em'});
+  }
+  if (actions.indexOf('css-only') !== -1) {
+    $('#text').css({display: 'none'});
+    $('#javascript').css({display: 'none'});
+    $('#css').css({width: '100%', 'font-size': '1em'});
+  }
 });

@@ -4,8 +4,9 @@
   "description": "Simple Page app boilerplate using webpack",
   "main": "scripts/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack",
-    "test": "./node_modules/.bin/eslint . && npm run build && npm run build -- -p"
+    "build": "webpack",
+    "watch": "webpack -d --watch",
+    "test": "eslint . && webpack"
   },
   "keywords": [
     "boilerplate",

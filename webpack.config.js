@@ -18,8 +18,6 @@ var getEnvironment = function() {
 };
 
 module.exports = {
-  devtool: 'source-map',
-
   entry: {
     'script': './scripts/index.js',
     'style': './styles/index.less',
