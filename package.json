@@ -36,7 +36,7 @@
     "md5": "^2.0.0",
     "node-libs-browser": "^0.5.2",
     "sprite-js": "^0.1.0",
-    "style-loader": "^0.12.3",
+    "style-loader": "^0.13.0",
     "text-loader": "0.0.1",
     "webpack": "^1.10.1"
   },
