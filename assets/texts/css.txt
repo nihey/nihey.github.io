@@ -67,7 +67,23 @@ img {
 }
 **
 
+#water > img {
+  -o-animation: side-scroll 7s linear infinite;
+  -ms-animation: side-scroll 7s linear infinite;
+  -moz-animation: side-scroll 7s linear infinite;
+  -webkit-animation: side-scroll 7s linear infinite;
+  animation: side-scroll 7s linear infinite;
+}
+**
+
+#water {
+  transition: bottom 5s cubic-bezier(0.11, 0.01, 0.16, 1.68);
+  bottom: -50px !important;
+}
+**
+
 body {
+  transition: background 4s ease-out;
   background: #59ABE3;
 }
 **
@@ -191,5 +207,14 @@ body {
   position: absolute;
   right: -32px;
   top: 0;
+}
+**
+
+#water {
+  -o-animation: opacity-change 5s ease-in-out infinite;
+  -ms-animation: opacity-change 5s ease-in-out infinite;
+  -moz-animation: opacity-change 5s ease-in-out infinite;
+  -webkit-animation: opacity-change 5s ease-in-out infinite;
+  animation: opacity-change 5s ease-in-out infinite;
 }
 **

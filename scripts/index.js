@@ -31,6 +31,7 @@ window.$ = $;
 window.hljs = hljs;
 
 imageLoad([require('../assets/images/terrain.png'),
+           require('../assets/images/water.png'),
            require('../assets/images/me.png'),
            require('../assets/images/random-chars/1.png'),
            require('../assets/images/random-chars/2.png'),
@@ -42,7 +43,7 @@ imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/clouds/4.png'),
            require('../assets/images/clouds/5.png'),
            require('../assets/images/clouds/6.png')],
-function(terrain, me) {
+function(terrain, water, me) {
   let skip = function() {
     window.page.skip = 1;
     window.page.tags.text = 99;
@@ -66,8 +67,8 @@ function(terrain, me) {
     columnFrequency: 0,
   });
 
-  window.page.people = Array.prototype.slice.call(arguments, 2, 6);
-  window.page.clouds = Array.prototype.slice.call(arguments, 6);
+  window.page.people = Array.prototype.slice.call(arguments, 3, 7);
+  window.page.clouds = Array.prototype.slice.call(arguments, 7);
 
   window.resizeBoxes = function() {
     var height = Math.max(200, window.innerHeight - 220);
@@ -78,10 +79,12 @@ function(terrain, me) {
   window.page.fixPlatforms = function() {
     // Remove the old platforms
     $('#platforms').html('');
+    $('#water').html('');
 
     var length = Math.ceil(window.outerWidth / 96) + 1;
     for(var i = 0; i < length; i++) {
       $('#platforms').append($(window.page.terrain).clone());
+      $('#water').append($(window.page.water).clone());
     }
   };
 
@@ -95,6 +98,7 @@ function(terrain, me) {
   // Expose global variables to be used on 'eval'
   window.page.me = me;
   window.page.terrain = terrain;
+  window.page.water = water;
 
   animate(require('../assets/texts/javascript.txt'), 'javascript', function(finished, chunk) {
     eval(chunk);

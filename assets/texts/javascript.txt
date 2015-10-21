@@ -16,6 +16,7 @@ for(i = 0; i < length; i++) {
   // Creates all platforms with a slight delay between them
   window.page.skip || setTimeout(function() {
     $('#platforms').append($(window.page.terrain).clone());
+    $('#water').append($(window.page.water).clone());
   }, i * 100);
 }
 
@@ -33,10 +34,12 @@ window.page.skip && window.page.fixPlatforms();
 window.onresize = function() {
   // Remove the old platforms
   $('#platforms').html('');
+  $('#water').html('');
 
   var length = Math.ceil(window.outerWidth / 96) + 1;
   for(var i = 0; i < length; i++) {
     $('#platforms').append($(window.page.terrain).clone());
+    $('#water').append($(window.page.water).clone());
   }
 
   // Update these text boxes height to be in optimal
