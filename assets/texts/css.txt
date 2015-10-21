@@ -68,17 +68,17 @@ img {
 **
 
 #water > img {
-  -o-animation: side-scroll 7s linear infinite;
-  -ms-animation: side-scroll 7s linear infinite;
-  -moz-animation: side-scroll 7s linear infinite;
-  -webkit-animation: side-scroll 7s linear infinite;
-  animation: side-scroll 7s linear infinite;
+  -o-animation: side-scroll 1s linear infinite;
+  -ms-animation: side-scroll 1s linear infinite;
+  -moz-animation: side-scroll 1s linear infinite;
+  -webkit-animation: side-scroll 1s linear infinite;
+  animation: side-scroll 1s linear infinite;
 }
 **
 
 #water {
   transition: bottom 5s cubic-bezier(0.11, 0.01, 0.16, 1.68);
-  bottom: -50px !important;
+  bottom: -90px !important;
 }
 **
 
@@ -159,7 +159,7 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-30%);
+    transform: translateY(-20px);
   }
   100% {
     transform: translateY(0%);
@@ -169,18 +169,26 @@ body {
 .github {
   position: fixed;
   z-index: 1100;
-  bottom: 15px;
+  bottom: 35px;
   right: 15px;
   color: #1E824C;
   font-size: 48px;
   text-decoration: none;
   outline: 0;
   transition: color 0.3s;
-  -o-animation: slight-dangle 2s ease-in-out infinite;
-  -ms-animation: slight-dangle 2s ease-in-out infinite;
-  -moz-animation: slight-dangle 2s ease-in-out infinite;
-  -webkit-animation: slight-dangle 2s ease-in-out infinite;
-  animation: slight-dangle 2s ease-in-out infinite;
+  -o-animation: slight-dangle 4s ease-in-out infinite;
+  -ms-animation: slight-dangle 4s ease-in-out infinite;
+  -moz-animation: slight-dangle 4s ease-in-out infinite;
+  -webkit-animation: slight-dangle 4s ease-in-out infinite;
+  animation: slight-dangle 4s ease-in-out infinite;
+}
+
+#water {
+  -o-animation: opacity-change 5s ease-in-out infinite, slight-dangle 4s ease-in-out infinite;
+  -ms-animation: opacity-change 5s ease-in-out infinite, slight-dangle 4s ease-in-out infinite;
+  -moz-animation: opacity-change 5s ease-in-out infinite, slight-dangle 4s ease-in-out infinite;
+  -webkit-animation: opacity-change 5s ease-in-out infinite, slight-dangle 4s ease-in-out infinite;
+  animation: opacity-change 5s ease-in-out infinite, slight-dangle 4s ease-in-out infinite;
 }
 **
 
@@ -207,14 +215,5 @@ body {
   position: absolute;
   right: -32px;
   top: 0;
-}
-**
-
-#water {
-  -o-animation: opacity-change 5s ease-in-out infinite;
-  -ms-animation: opacity-change 5s ease-in-out infinite;
-  -moz-animation: opacity-change 5s ease-in-out infinite;
-  -webkit-animation: opacity-change 5s ease-in-out infinite;
-  animation: opacity-change 5s ease-in-out infinite;
 }
 **
