@@ -34,7 +34,7 @@
 §§§
 
 <p>
-  Right now Working with a great team on a company called Async Open Source, I've
+  Right now working with a great team on a company called Async Open Source, I've
   been building Rich Internet Applications over the last 2 years.
 </p>
 **
@@ -91,7 +91,7 @@
 **
 §§
 
-<b>What is you tech stack? What tools do you like to use?</b>
+<b>What is your tech stack? What tools do you like to use?</b>
 **
 §§
 <p>
@@ -139,7 +139,7 @@
         It was a tool meant to be used by designers to receive client feedback with annotations.
       </p>
       <p>
-        Even though this tool did not managed to survive, creating a startup
+        Even though this tool did not manage to survive, creating a startup
         from scratch was a great experience in my life. Certainly one that I
         shall not forget.
       </p>
