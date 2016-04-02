@@ -164,3 +164,8 @@ function(terrain, water, me) {
     $('#css').css({width: '100%', 'font-size': '1em'});
   }
 });
+
+if (!Environment.DEBUG) {
+  ga('create', 'UA-67879786-1', 'auto');
+  ga('send', 'pageview');
+}
