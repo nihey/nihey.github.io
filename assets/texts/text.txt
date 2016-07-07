@@ -115,7 +115,6 @@
 <p>
   From my personal perspective, these are the projects that I liked most (descending):
   <ul>
-    <li><a target="_blank" href="http://github.com/nihey/node-bovespa">Bovespa</a></li>
     <li><a target="_blank" href="https://github.com/nihey/nihey.github.io">This Page</a></li>
     <li><a target="_blank" href="http://nihey.github.io/breaking-badify/">Breaking Badify</a></li>
     <li><a target="_blank" href="http://nihey.github.io/sketch-gallery/">Sketch Gallery</a></li>
