@@ -50,8 +50,9 @@ window.resizeBoxes();
 **
 --
 
-// Enables my walking animation
-window.page.me.columnFrequency = 1
+// Enables walking animation
+window.page.me.columnFrequency = 1;
+window.page.beauty.columnFrequency = 1;
 **
 
 // How much time a object would take to cross the screen if it had a given
@@ -105,7 +106,7 @@ spawnClouds(0);
 var spawnPeople = function(time) {
   setTimeout(function() {
     // Only one person at a time
-    if ($('#people').children().length > 1) {
+    if ($('#people').children().length > 2) {
       return spawnPeople(animationTime(80))
     }
 

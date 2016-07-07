@@ -88,6 +88,21 @@ body {
 }
 **
 
+#beauty-canvas {
+  -o-animation: fade-in 7s;
+  -ms-animation: fade-in 7s;
+  -moz-animation: fade-in 7s;
+  -webkit-animation: fade-in 7s;
+  animation: fade-in 7s;
+  opacity: 1;
+}
+**
+
+.heart {
+  animation: pulse 3s infinite !important;
+}
+**
+
 #javascript .hljs, #css .hljs {
   background-color: rgba(63, 63, 63, 0.8);
 }

@@ -33,6 +33,7 @@ window.hljs = hljs;
 imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/water.png'),
            require('../assets/images/me.png'),
+           require('../assets/images/unknown-beauty.png'),
            require('../assets/images/random-chars/1.png'),
            require('../assets/images/random-chars/2.png'),
            require('../assets/images/random-chars/3.png'),
@@ -43,7 +44,7 @@ imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/clouds/4.png'),
            require('../assets/images/clouds/5.png'),
            require('../assets/images/clouds/6.png')],
-function(terrain, water, me) {
+function(terrain, water, me, beauty) {
   let skip = function() {
     window.page.skip = 1;
     window.page.tags.text = 99;
@@ -56,7 +57,7 @@ function(terrain, water, me) {
 
   window.Sprite = Sprite;
 
-  // Initialize the sprite
+  // Initialize the sprites
   me = new Sprite({
     canvas: document.getElementById('canvas'),
     image: me,
@@ -67,8 +68,18 @@ function(terrain, water, me) {
     columnFrequency: 0,
   });
 
-  window.page.people = Array.prototype.slice.call(arguments, 3, 7);
-  window.page.clouds = Array.prototype.slice.call(arguments, 7);
+  beauty = new Sprite({
+    canvas: document.getElementById('beauty-canvas'),
+    image: beauty,
+    rows: 4,
+    columns: 3,
+    rowIndex: 2,
+    columnIndex: 1,
+    columnFrequency: 0,
+  });
+
+  window.page.people = Array.prototype.slice.call(arguments, 4, 8);
+  window.page.clouds = Array.prototype.slice.call(arguments, 8);
 
   window.resizeBoxes = function() {
     var height = Math.max(200, window.innerHeight - 220);
@@ -89,14 +100,16 @@ function(terrain, water, me) {
   };
 
   // Keeps the sprite running
-  var context = me.context;
   setInterval(function() {
-    context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+    me.context.clearRect(0, 0, me.context.canvas.width, me.context.canvas.height);
+    beauty.context.clearRect(0, 0, beauty.context.canvas.width, beauty.context.canvas.height);
     me.draw(0, 0);
+    beauty.draw(0, 0);
   }, 200);
 
   // Expose global variables to be used on 'eval'
   window.page.me = me;
+  window.page.beauty = beauty;
   window.page.terrain = terrain;
   window.page.water = water;
 
