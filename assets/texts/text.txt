@@ -34,16 +34,8 @@
 §§§
 
 <p>
-  Right now working with a great team on a company called Async Open Source, I've
-  been building Rich Internet Applications over the last 2 years.
-</p>
-**
-§§§
-
-<p>
-  But don't give up on me right away, even though I'm at a full time job, I may
-  as well do something for you when I'm not overloaded or on my free time -
-  depending on the complexity.
+  Right now, I'm working on several independent projects that will be made
+  public soon.
 </p>
 **
 §§§
