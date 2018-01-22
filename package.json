@@ -32,7 +32,7 @@
     "html-minifier": "^1.4.0",
     "image-load": "0.0.0",
     "img-loader": "^1.1.0",
-    "jquery": "^2.1.4",
+    "jquery": "^3.3.1",
     "json-loader": "^0.5.2",
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
