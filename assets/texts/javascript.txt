@@ -52,7 +52,7 @@ window.resizeBoxes();
 
 // Enables walking animation
 window.page.me.columnFrequency = 1;
-window.page.beauty.columnFrequency = 1;
+window.page.julia.columnFrequency = 1;
 **
 
 // How much time a object would take to cross the screen if it had a given

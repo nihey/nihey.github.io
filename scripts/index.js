@@ -33,7 +33,7 @@ window.hljs = hljs;
 imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/water.png'),
            require('../assets/images/me.png'),
-           require('../assets/images/unknown-beauty.png'),
+           require('../assets/images/julia.png'),
            require('../assets/images/random-chars/1.png'),
            require('../assets/images/random-chars/2.png'),
            require('../assets/images/random-chars/3.png'),
@@ -44,7 +44,7 @@ imageLoad([require('../assets/images/terrain.png'),
            require('../assets/images/clouds/4.png'),
            require('../assets/images/clouds/5.png'),
            require('../assets/images/clouds/6.png')],
-function(terrain, water, me, beauty) {
+function(terrain, water, me, julia) {
   let skip = function() {
     window.page.skip = 1;
     window.page.tags.text = 99;
@@ -68,9 +68,9 @@ function(terrain, water, me, beauty) {
     columnFrequency: 0,
   });
 
-  beauty = new Sprite({
-    canvas: document.getElementById('beauty-canvas'),
-    image: beauty,
+  julia = new Sprite({
+    canvas: document.getElementById('julia'),
+    image: julia,
     rows: 4,
     columns: 3,
     rowIndex: 2,
@@ -102,14 +102,14 @@ function(terrain, water, me, beauty) {
   // Keeps the sprite running
   setInterval(function() {
     me.context.clearRect(0, 0, me.context.canvas.width, me.context.canvas.height);
-    beauty.context.clearRect(0, 0, beauty.context.canvas.width, beauty.context.canvas.height);
+    julia.context.clearRect(0, 0, julia.context.canvas.width, julia.context.canvas.height);
     me.draw(0, 0);
-    beauty.draw(0, 0);
+    julia.draw(0, 0);
   }, 200);
 
   // Expose global variables to be used on 'eval'
   window.page.me = me;
-  window.page.beauty = beauty;
+  window.page.julia = julia;
   window.page.terrain = terrain;
   window.page.water = water;
 
