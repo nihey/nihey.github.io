@@ -1,47 +1,56 @@
-var webpack = require('webpack'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin'),
-    HtmlPlugin = require('./plugins/html-plugin'),
-    path = require('path');
+var webpack = require("webpack"),
+    ExtractTextPlugin = require("extract-text-webpack-plugin"),
+    HtmlPlugin = require("./plugins/html-plugin"),
+    path = require("path");
+
+var cssExtractTextPlugin = new ExtractTextPlugin("[name].css");
 
 module.exports = {
+  devServer: {
+    port: 8000,
+    historyApiFallback: true,
+  },
+
   entry: {
-    'script': './scripts/index.js',
-    'style': './styles/index.less',
+    "script": "./scripts/index.js",
+    "style": "./styles/index.less",
   },
 
   module: {
-    loaders: [
-      { test: /\.txt$/, loader: 'text-loader'},
-      { test: /\.json$/, loader: 'json-loader'},
-      { test: /\.js$/, exclude: /(node_modules|bower_components)\//, loader: 'babel-loader'},
-      { test: /\.(ttf.*|eot.*|woff.*|ogg|mp3)$/, loader: 'file-loader'},
-      { test: /.(png|jpe?g|gif|svg.*)$/, loader: 'file-loader!img-loader?optimizationLevel=7&progressive=true'},
+    rules: [
+      { test: /\.txt$/, loader: "text-loader" },
+      { test: /\.json$/, loader: "json-loader"},
+      { test: /\.js$/, exclude: /(node_modules|bower_components)\//, loader: "babel-loader"},
+      { test: /\.(ttf.*|eot.*|woff.*|ogg|mp3)$/, loader: "file-loader"},
+      { test: /.(png|jpe?g|gif|svg.*)$/, loader: "file-loader"},
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+        loader: cssExtractTextPlugin.extract("css-loader"),
       },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader'),
+        loader: cssExtractTextPlugin.extract("css-loader!less-loader"),
       },
     ],
   },
 
   plugins: [
-    new ExtractTextPlugin('[name].css'),
-    new HtmlPlugin('index.html'),
+    cssExtractTextPlugin,
+    new HtmlPlugin("index.html"),
     new webpack.DefinePlugin({
-      Environment: JSON.stringify(require('config')),
+      CONFIG: JSON.stringify(require("config")),
     }),
   ],
 
   resolve: {
-    root: path.join(__dirname, 'js'),
-    extensions: ['', '.js', '.json'],
+    modules: [
+      path.resolve(__dirname, "src"),
+      path.resolve(__dirname, "node_modules"),
+    ],
   },
 
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
+    path: path.join(__dirname, "dist"),
+    filename: "[name].js",
   },
 };
