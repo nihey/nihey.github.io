@@ -5,7 +5,7 @@
   "main": "scripts/index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
-    "start": "webpack -d --watch",
+    "start": "webpack-dev-server -d --watch",
     "test": "eslint . && webpack"
   },
   "keywords": [
@@ -47,6 +47,7 @@
     "style-loader": "^0.23.1",
     "text-loader": "0.0.1",
     "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.11.0"
   }
 }

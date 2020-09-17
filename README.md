@@ -137,7 +137,7 @@ browser. You may notice that there are some special markup on them:
 
 - `++[anything] or --[anything]` tells `animate` that the semaphore-like
   `window.page.tags` should be either incremented or decremented, if a tag
-  react zero (or any falsy value), its presentation will stop - e.g.:
+  value is zero (or any falsy value), its presentation will stop - e.g.:
   `window.page.tags.javascript = 0; window.page.checkTags()` will make
   JavaScript presentation stop.
 
