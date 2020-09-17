@@ -1,159 +1,93 @@
-<h2>Nihey Takizawa</h2>
+<h1>Nihey Takizawa (仁平 in Japanese)</h1>
 **
 §§§
-<h3>Main Skills</h3>
 ++css
-**
-§§§
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>
-    JavaScript§§
-    <ul>
-      <li>jQuery</li>
-      <li>ReactJS</li>
-      <li>EmberJS</li>
-      <li>NodeJS</li>
-    </ul>
-  </li>
-  <li>Python</li>
-</ul>
-**
-§§§
+§§§§§§
 
-<h3>About Me</h3>
+<h2>About Me</h2>
 **
 §§§
 
 <p>
-  I'm a Web Developer currently based on São Carlos - Brazil, graduated
-  as a Bachelor of Computer Science by University of São Paulo.
+  A Developer and Entrepreneur currently based on Ribeirão Preto - Brazil.
+  Currently mainly working on my next own project called
+  <a target="_blank" rel="noopener noreferrer" href="https://videomatik.com.br/">Videomatik</a>
+  with my partners
+  <a target="_blank" rel="noopener noreferrer" href="https://brorlandi.github.io/">Bruno Orlandi</a>
+  and Hygor Amorim (from
+  <a target="_blank" rel="noopener noreferrer" href="https://www.ozprodutora.com.br/">Oz Productions</a>).
 </p>
 **
 §§§
 
 <p>
-  Right now, I'm working on several independent projects that will be made
-  public soon.
-</p>
-**
-§§§
-
-<h3>Hobbies and LifeStyle</h3>
-**
-§§§
-
-<p>
-  During my free time, I'm usually doing some <i>Open Source</i> code out there -
-  usually on <a target="_blank" href="https://github.com">GitHub</a>. My true passion about
-  <i>Open Source</i> comes from providing help on small, not-so-known projects
-  that have quality in a way.
+  Over the years, I've worked on several projects, helping to build them from
+  scratch and maintain them until a substantial growth. Some of these projects
+  were my own and some of them were done as an outsource contractor.
 </p>
 **
 §§§
 
 <p>
-  I'm also a small stock market investor, currently only operating on Brazil's
-  main stock exchange (<a target="_blank" href="http://www.bmfbovespa.com.br/">BM&FBOVESPA</a>).
-  Long-term strategies is my main focus on these investments, but sometimes a
-  take a little peek into short term trading.
-</p>
-**
-§§§
-
-<p>
-  Quiet, silent and undercrowded spaces are usually my favorite working places,
-  so telecommuting/remote working will certainly be the environment where I'll
-  be productive at my full extent.
-</p>
-**
-§§§
-
-<h3>FAQ</h3>
-**
-§§§
-
-<b>How do I contact you?</b>
-**
-§§
-<p>
-  My e-mail is <strong>nihey.takizawa@gmail.com</strong>.
-</p>
-**
-§§
-
-<b>What is your tech stack? What tools do you like to use?</b>
-**
-§§
-<p>
-  You can find my current stack at <a target="_blank" href="http://stackshare.io/nihey/my-stack">StackShare</a>.
-  From the tools displayed there, I can highlight:
+  Some of my own projects that I would like to highlight are:
   <ul>
-    <li>Git</li>
-    <li>Vim</li>
-    <li>Trello</li>
-    <li>JavaScript (with Babel)</li>
-    <li>NodeJS</li>
-  </ul>
-  as tools I use intensively.
-</p>
-**
-§§
-
-<b>What <i>Open Source</i> projects would you like to highlight?</b>
-**
-§§
-<p>
-  From my personal perspective, these are the projects that I liked most (descending):
-  <ul>
-    <li><a target="_blank" href="https://github.com/nihey/nihey.github.io">This Page</a></li>
-    <li><a target="_blank" href="http://nihey.github.io/breaking-badify/">Breaking Badify</a></li>
-    <li><a target="_blank" href="http://nihey.github.io/sketch-gallery/">Sketch Gallery</a></li>
-    <li><a target="_blank" href="http://nihey.github.io/sprites/">Sprite</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://kassellabs.io/">Kassel Labs</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://starwarsintrocreator.kassellabs.io/">Star Wars Intro Creator</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://videomatik.com.br/">Videomatik</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://sheet.best/">Sheet Best</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://cliqueimudei.com/">Cliquei Mudei</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://retro-sprite-creator.nihey.org/">Retro Sprite Creator</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://whatsdirect.zerosoft.com.br/">WhatsDirect.io</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/nihey/node-bovespa">Node Bovespa</a></li>
   </ul>
 </p>
 **
-§§
+§§§
 
-<b>What other projects that you have been a part-of would you like to highlight?</b>
-**
-§§
+If you want to stay updated about my new projects, I recommend following me on
+<a target="_blank" rel="noopener noreferrer" href="https://www.producthunt.com/@nihey">
+  Product Hunt
+</a>
+and
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/nihey">GitHub</a>. You'll see the best of me there.
+
 <p>
+  My current Favorite Tech Stack is:
   <ul>
     <li>
-      <p>
-        I worked as a developer/co-founder, along with
-        <a target="_blank" href="http://www.quicadesign.com.br/">Quiçá Design</a>
-        of a now inactive startup called
-        <a target="_blank" href="http://takizawa.nihas.net/crewee/">Crewee</a>.
-        It was a tool meant to be used by designers to receive client feedback with annotations.
-      </p>
-      <p>
-        Even though this tool did not manage to survive, creating a startup
-        from scratch was a great experience in my life. Certainly one that I
-        shall not forget.
-      </p>
-      <p>
-        You can see the
-        <a target="_blank" href="http://takizawa.nihas.net/pitch/">pitch slides here</a> (available only in portuguese).
-      </p>
+      Backend
+      <ul>
+        <li>Node</li>
+        <li>Strapi</li>
+        <li>GraphQL</li>
+      </ul>
     </li>
     <li>
-      <p>
-        During my internship I helped to build RNP's (Rede Nacional
-        de Pesquisa - Brazil's academic internet backbone) management system for
-        security incidents. The system is called
-        <a target="_blank" href="http://www.brasil.gov.br/ciencia-e-tecnologia/2014/12/rnp-lanca-sistema-de-gestao-de-incidentes-de-seguranca">SGIS</a>
-        , and is closed - to be used only the RNP Staff.
-      </p>
+      Frontend
+      <ul>
+        <li>React</li>
+        <li>Next.JS</li>
+        <li>Expo (for Apps)</li>
+      </ul>
     </li>
     <li>
-      <p>
-        I have been working on a <i>SaaS</i> (Software as as Service) <i>BI</i> (Business Intelligence)
-        system for <a target="_blank" href="https://github.com/stoq">Stoq</a> over the last year.
-      </p>
+      DevOps
+      <ul>
+        <li>Linux</li>
+        <li>PostgreSQL</li>
+        <li>Traefik</li>
+        <li>Docker</li>
+        <li>Vercel</li>
+      </ul>
     </li>
   </ul>
 </p>
+**
+§§§
 
+<p>
+  You can contact me at my personal email adddress at:
+  <a href="mailto:nihey.takizawa@gmail.com"><b>nihey.takizawa@gmail.com</b></a>
+</p>
+**
+§§§
