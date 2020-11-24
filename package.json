@@ -18,7 +18,7 @@
   "license": "CC0-1.0",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.1.2",
     "img-loader": "^3.0.1",
     "jquery": "^3.5.1",
     "sprite-js": "^0.1.1"
