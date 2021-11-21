@@ -91,7 +91,7 @@ and
 §§§
 
 <p>
-  You can contact me at my personal email adddress at:
+  You can contact me at my personal email address at:
   <a href="mailto:nihey.takizawa@gmail.com"><b>nihey.takizawa@gmail.com</b></a>
 </p>
 **
