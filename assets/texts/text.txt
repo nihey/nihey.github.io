@@ -31,8 +31,10 @@
 <p>
   Some of my own projects that I would like to highlight are:
   <ul>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://autoeditor.video">AutoEditor</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://sheetapi.rest">Sheet API</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://screenshotty.link">Screenshotty</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://kassellabs.io/">Kassel Labs</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://starwarsintrocreator.kassellabs.io/">Star Wars Intro Creator</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://videomatik.com.br/">Videomatik</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://retro-sprite-creator.nihey.org/">Retro Sprite Creator</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://whatsdirect.zerosoft.com.br/">WhatsDirect.io</a></li>
