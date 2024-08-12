@@ -10,12 +10,9 @@
 
 <p>
   A Developer and Entrepreneur currently based on Ribeirão Preto - Brazil.
-  Currently mainly working on my next own project called
-  <a target="_blank" rel="noopener noreferrer" href="https://videomatik.com.br/">Videomatik</a>
-  with my partners
-  <a target="_blank" rel="noopener noreferrer" href="https://brorlandi.github.io/">Bruno Orlandi</a>
-  and Hygor Amorim (from
-  <a target="_blank" rel="noopener noreferrer" href="https://www.ozprodutora.com.br/">Oz Productions</a>).
+  Currently working on my next project called
+  <a target="_blank" rel="noopener noreferrer" href="https://autoeditor.video/">AutoEditor</a>,
+  and some other ones from my portfolio.
 </p>
 **
 §§§
