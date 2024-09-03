@@ -35,7 +35,6 @@
     <li><a target="_blank" rel="noopener noreferrer" href="https://videomatik.com.br/">Videomatik</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://retro-sprite-creator.nihey.org/">Retro Sprite Creator</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://whatsdirect.zerosoft.com.br/">WhatsDirect.io</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/nihey/node-bovespa">Node Bovespa</a></li>
   </ul>
 </p>
 **
