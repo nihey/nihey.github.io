@@ -34,7 +34,8 @@
     <li><a target="_blank" rel="noopener noreferrer" href="https://kassellabs.io/">Kassel Labs</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://videomatik.com.br/">Videomatik</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://retro-sprite-creator.nihey.org/">Retro Sprite Creator</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://whatsdirect.zerosoft.com.br/">WhatsDirect.io</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://whats.direct/">Whats.Direct</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://quickfiller.org/">Quick Filler (portuguese only)</a></li>
   </ul>
 </p>
 **
