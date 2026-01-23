@@ -4,9 +4,9 @@
   "description": "Simple Page app boilerplate using webpack",
   "main": "scripts/index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack -p",
-    "start": "webpack-dev-server -d --watch",
-    "test": "eslint . && webpack"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production webpack -p",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server -d --watch",
+    "test": "eslint . && NODE_OPTIONS=--openssl-legacy-provider webpack"
   },
   "keywords": [
     "boilerplate",
