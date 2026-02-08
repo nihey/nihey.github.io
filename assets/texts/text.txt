@@ -37,6 +37,7 @@
     <li><a target="_blank" rel="noopener noreferrer" href="https://whats.direct/">Whats.Direct</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://quickfiller.org/">Quick Filler (portuguese only)</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://autoclipper.live">AutoClipper</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://bestclaw.host/">BestClaw</a></li>
   </ul>
 </p>
 **
