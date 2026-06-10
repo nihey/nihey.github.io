@@ -5,8 +5,10 @@
   "main": "scripts/index.js",
   "scripts": {
     "build": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production webpack -p",
+    "build:dev": "NODE_OPTIONS=--openssl-legacy-provider webpack",
     "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server -d --watch",
-    "test": "eslint . && NODE_OPTIONS=--openssl-legacy-provider webpack"
+    "lint": "eslint .",
+    "test": "node --test \"tests/*.test.js\""
   },
   "keywords": [
     "boilerplate",

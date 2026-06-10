@@ -29,8 +29,8 @@ HtmlParserWebpackPlugin.prototype.compile = function(file, compilation, callback
   var input = path.join(this.compiler.context, file);
   var html = $.load(fs.readFileSync(input));
   html("[href],[src]").each(function(i, element) {
-    this.parse(element, "href", compilation);
-    this.parse(element, "src", compilation);
+    this.parse(html, element, "href", compilation);
+    this.parse(html, element, "src", compilation);
   }.bind(this));
 
   var htmlSource = html.html();
@@ -47,14 +47,14 @@ HtmlParserWebpackPlugin.prototype.compile = function(file, compilation, callback
 };
 
 /* If the elementh with the tag includes a '!' prefix, it should be emitted */
-HtmlParserWebpackPlugin.prototype.parse = function(element, attr, compilation) {
-  var file = $(element).attr(attr);
+HtmlParserWebpackPlugin.prototype.parse = function(html, element, attr, compilation) {
+  var file = html(element).attr(attr);
   // If the element does not have a valid href or src, or if it does not
   // require bundling, don't do anything.
   if (!file || file[0] !== "!") {
     return;
   }
-  $(element).attr(attr, this.emit(file.substring(1), compilation));
+  html(element).attr(attr, this.emit(file.substring(1), compilation));
 };
 
 /* Create a file on the dist directory for the resource with a md5 name */
