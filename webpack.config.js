@@ -1,6 +1,7 @@
 var webpack = require("webpack"),
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
     HtmlPlugin = require("./plugins/html-plugin"),
+    StaticPlugin = require("./plugins/static-plugin"),
     path = require("path");
 
 var cssExtractTextPlugin = new ExtractTextPlugin("[name].css");
@@ -37,6 +38,7 @@ module.exports = {
   plugins: [
     cssExtractTextPlugin,
     new HtmlPlugin("index.html"),
+    new StaticPlugin("static"),
     new webpack.DefinePlugin({
       CONFIG: JSON.stringify(require("config")),
     }),

@@ -1,5 +1,7 @@
 import $ from "jquery";
-import hljs from "highlight.js";
+import hljs from "highlight.js/lib/highlight";
+import hljsJavascript from "highlight.js/lib/languages/javascript";
+import hljsCss from "highlight.js/lib/languages/css";
 import animate from "./animate";
 import imageLoad from "image-load";
 import Sprite from "exports-loader?window.Sprite!sprite-js/dist/sprite.min";
@@ -26,6 +28,10 @@ window.page = {
     "css": 0,
   },
 };
+
+// Only the two languages shown on the page, all of them add ~750KB to the bundle
+hljs.registerLanguage("javascript", hljsJavascript);
+hljs.registerLanguage("css", hljsCss);
 
 window.$ = $;
 window.hljs = hljs;
@@ -177,8 +183,3 @@ function(terrain, water, me, beauty) {
     $("#css").css({width: "100%", "font-size": "1em"});
   }
 });
-
-if (!Environment.DEBUG) {
-  ga("create", "UA-67879786-1", "auto");
-  ga("send", "pageview");
-}

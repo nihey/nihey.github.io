@@ -1,12 +1,12 @@
 <p align="center">
-  <a target="_blank" href="http://nihey.github.io">
+  <a target="_blank" href="https://nihey.github.io">
     <img src="https://raw.githubusercontent.com/nihey/nihey.github.io/development/screenshot.png"/>
   </a>
 </p>
 
 # 仁平 / Nihey Takizawa
 
-My Personal Homepage ([here](http://nihey.github.io))
+My Personal Homepage ([here](https://nihey.github.io))
 
 [![Build
 Status](https://travis-ci.org/nihey/nihey.github.io.svg?branch=development)](https://travis-ci.org/nihey/nihey.github.io)
@@ -56,12 +56,17 @@ This is the project structure:
 ├── index.html
 ├── package.json
 ├── plugins
-│   └── html-plugin.js
+│   ├── html-plugin.js
+│   └── static-plugin.js
 ├── README.md
 ├── screenshot.png
 ├── scripts
 │   ├── animate.js
 │   └── index.js
+├── static
+│   ├── og-image.png
+│   ├── robots.txt
+│   └── sitemap.xml
 ├── styles
 │   ├── index.less
 │   └── prefixed.less
@@ -150,6 +155,19 @@ content (animation markup stripped) at build time. `index.html` uses this to put
 a visually hidden copy of `text.txt` in the static HTML, so crawlers can read the
 bio and follow its links. Bio links use `rel="noopener"` only: no `nofollow`, so
 they pass SEO value, and no `noreferrer`, so the linked sites see the referral.
+
+# SEO
+
+- `index.html` holds the title, description, canonical URL, Open Graph/Twitter
+  tags and a JSON-LD `Person`/`ProfilePage` schema. Keep the description and
+  the schema in sync with `text.txt` when projects change.
+- `plugins/static-plugin.js` copies everything in `static/` to the root of
+  `dist/` as-is (`robots.txt`, `sitemap.xml`, `og-image.png`), for files that
+  need a stable URL.
+- `static/og-image.png` (1200x630) is a screenshot of the finished page; retake
+  it when the page changes visibly.
+- Only the JavaScript and CSS highlight.js languages are bundled, keeping
+  `script.js` small.
 
 # Deploying
 

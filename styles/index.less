@@ -1,4 +1,3 @@
-@import "../node_modules/font-awesome/css/font-awesome.min.css";
 @import "../node_modules/highlight.js/styles/zenburn.css";
 @import "./prefixed.less";
 
@@ -116,6 +115,14 @@ body {
 .github {
   position: fixed;
   opacity: 0;
+
+  // Sized and colored by the animated CSS through font-size and color
+  svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
 }
 
 // Kept in the DOM for crawlers and screen readers, the same content is shown
