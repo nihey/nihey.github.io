@@ -38,6 +38,7 @@
     <li><a target="_blank" rel="noopener noreferrer" href="https://quickfiller.org/">Quick Filler (portuguese only)</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://autoclipper.live">AutoClipper</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://bestclaw.host/">BestClaw</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://tinyworlds.nihey.org/">tinyworlds</a></li>
   </ul>
 </p>
 **
