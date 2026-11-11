@@ -11,7 +11,7 @@
 <p>
   A Developer and Entrepreneur currently based on Ribeirão Preto - Brazil.
   Currently working on my next project called
-  <a target="_blank" rel="noopener noreferrer" href="https://autoclipper.live">AutoClipper</a>,
+  <a target="_blank" rel="noopener" href="https://autoclipper.live">AutoClipper</a>,
   and some other ones from my portfolio.
 </p>
 **
@@ -28,23 +28,23 @@
 <p>
   Some of my own projects that I would like to highlight are:
   <ul>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://screenshotty.link">Screenshotty</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://kassellabs.io/">Kassel Labs</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://quickfiller.org/">Quick Filler (portuguese only)</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://autoclipper.live">AutoClipper</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://bestclaw.host/">BestClaw</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://tinyworlds.nihey.org/">tinyworlds</a></li>
+    <li><a target="_blank" rel="noopener" href="https://screenshotty.link">Screenshotty</a></li>
+    <li><a target="_blank" rel="noopener" href="https://kassellabs.io/">Kassel Labs</a></li>
+    <li><a target="_blank" rel="noopener" href="https://quickfiller.org/">Quick Filler (portuguese only)</a></li>
+    <li><a target="_blank" rel="noopener" href="https://autoclipper.live">AutoClipper</a></li>
+    <li><a target="_blank" rel="noopener" href="https://bestclaw.host/">BestClaw</a></li>
+    <li><a target="_blank" rel="noopener" href="https://tinyworlds.nihey.org/">tinyworlds</a></li>
   </ul>
 </p>
 **
 §§§
 
 If you want to stay updated about my new projects, I recommend following me on
-<a target="_blank" rel="noopener noreferrer" href="https://www.producthunt.com/@nihey">
+<a target="_blank" rel="noopener" href="https://www.producthunt.com/@nihey">
   Product Hunt
 </a>
 and
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/nihey">GitHub</a>. You'll see the best of me there.
+<a target="_blank" rel="noopener" href="https://github.com/nihey">GitHub</a>. You'll see the best of me there.
 
 <p>
   My current Favorite Tech Stack is:

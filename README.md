@@ -144,6 +144,26 @@ browser. You may notice that there are some special markup on them:
 - `§` is a slight delay request before proceeding, you can stack those up to
   increase the delay time: `§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§`.
 
+Since the typed text only exists after JavaScript runs, `plugins/html-plugin.js`
+also fills any `data-include="<file>"` element in `index.html` with that file's
+content (animation markup stripped) at build time. `index.html` uses this to put
+a visually hidden copy of `text.txt` in the static HTML, so crawlers can read the
+bio and follow its links. Bio links use `rel="noopener"` only: no `nofollow`, so
+they pass SEO value, and no `noreferrer`, so the linked sites see the referral.
+
+# Deploying
+
+GitHub Pages serves the `master` branch, which holds only the built files.
+Build on `development`, then replace `master`'s contents with `dist/`:
+
+```
+$ npm run build
+$ git worktree add /tmp/nihey-pages master
+$ rm -rf /tmp/nihey-pages/* && cp -r dist/* /tmp/nihey-pages/
+$ cd /tmp/nihey-pages && git add -A && git commit -m "Update <development sha>" && git push origin master
+$ cd - && git worktree remove /tmp/nihey-pages
+```
+
 I hope that helps you, feel free to look into this code in any way you want.
 
 # Acknowledgements

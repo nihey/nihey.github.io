@@ -28,6 +28,9 @@ HtmlParserWebpackPlugin.prototype.apply = function(compiler) {
 HtmlParserWebpackPlugin.prototype.compile = function(file, compilation, callback) {
   var input = path.join(this.compiler.context, file);
   var html = $.load(fs.readFileSync(input));
+  html("[data-include]").each(function(i, element) {
+    this.include(html(element));
+  }.bind(this));
   html("[href],[src]").each(function(i, element) {
     this.parse(element, "href", compilation);
     this.parse(element, "src", compilation);
@@ -44,6 +47,27 @@ HtmlParserWebpackPlugin.prototype.compile = function(file, compilation, callback
   }
   this.createFile(compilation, file, htmlSource);
   callback();
+};
+
+/* Fill a 'data-include' element with the given presentation text file, minus
+ * the animation markup (see README), so the content and its links are in the
+ * static HTML for crawlers instead of only being typed in by JavaScript.
+ */
+HtmlParserWebpackPlugin.prototype.include = function(element) {
+  var file = path.join(this.compiler.context, element.attr("data-include"));
+  var source = fs.readFileSync(file, "utf8")
+    .split("\n")
+    // '**' progress, '++tag' and '--tag' semaphore lines are not content
+    .filter(function(line) {
+      return !/^(\*\*|\+\+|--)/.test(line);
+    })
+    // '§' is a delay, and a trailing '\' joins the line with the next one
+    .map(function(line) {
+      line = line.replace(/§/g, "");
+      return /\\$/.test(line) ? line.slice(0, -1) : line + "\n";
+    })
+    .join("");
+  element.html(source).removeAttr("data-include");
 };
 
 /* If the elementh with the tag includes a '!' prefix, it should be emitted */
