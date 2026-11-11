@@ -11,7 +11,7 @@
 <p>
   A Developer and Entrepreneur currently based on Ribeirão Preto - Brazil.
   Currently working on my next project called
-  <a target="_blank" rel="noopener noreferrer" href="https://autoeditor.video/">AutoEditor</a>,
+  <a target="_blank" rel="noopener noreferrer" href="https://autoclipper.live">AutoClipper</a>,
   and some other ones from my portfolio.
 </p>
 **
@@ -28,13 +28,8 @@
 <p>
   Some of my own projects that I would like to highlight are:
   <ul>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://autoeditor.video">AutoEditor</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://sheetapi.rest">Sheet API</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://screenshotty.link">Screenshotty</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://kassellabs.io/">Kassel Labs</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://videomatik.com.br/">Videomatik</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://retro-sprite-creator.nihey.org/">Retro Sprite Creator</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://whats.direct/">Whats.Direct</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://quickfiller.org/">Quick Filler (portuguese only)</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://autoclipper.live">AutoClipper</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://bestclaw.host/">BestClaw</a></li>
