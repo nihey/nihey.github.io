@@ -169,6 +169,9 @@ they pass SEO value, and no `noreferrer`, so the linked sites see the referral.
 - Only the JavaScript and CSS highlight.js languages are bundled, keeping
   `script.js` small.
 
+The full set of rules (and why each exists) is in `AGENTS.md`, which
+`CLAUDE.md` imports.
+
 # Deploying
 
 GitHub Pages serves the `master` branch, which holds only the built files.
